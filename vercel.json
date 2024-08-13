@@ -2,9 +2,9 @@
     "version": 2,
     "builds": [
       {
-        "src": "tweetapp/tweetapp/wsgi.py",
+        "src": "tweetapp/wsgi.py",
         "use": "@vercel/python",
-        "config": {  "maxLambdaSize": "50mb" , "runtime":"python3.9"}
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
       {
         "src": "build_files.sh",
@@ -21,8 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "tweetapp/tweetapp/wsgi.py"
+        "dest": "tweetapp/wsgi.py"
       }
     ]
   }
- 
